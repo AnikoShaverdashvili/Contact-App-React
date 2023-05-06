@@ -7,7 +7,7 @@ const Contact = (props) => {
         <img
           src={`https://ui-avatars.com/api/?name=${props.contact.name}`}
           style={{ width: "80%" }}
-          alt="image"></img>
+          alt="avatar"></img>
       </div>
       <div className="col-6 col-md-5 text-warning pt-0">
         <span className="h4">{props.contact.name}</span>
@@ -26,9 +26,14 @@ const Contact = (props) => {
           <i className="bi bi-star" style={{ fontSize: "1rem" }}></i>
         </button>
       </div>
-      <button className="btn btn-secondary form-control">
-        {props.contact.name}
-      </button>
+      <div className="col-2 col-md-3 pt-md-3">
+        <button className="btn btn-primary btn-small m-1">
+          <i class="bi bi-pencil-square" style={{ fontSize: "1rem" }}></i>
+        </button>
+        <button className="btn btn-danger btn-small m-1">
+          <i class="bi bi-trash-fill" style={{ fontSize: "1rem" }}></i>
+        </button>
+      </div>
     </div>
   );
 };
